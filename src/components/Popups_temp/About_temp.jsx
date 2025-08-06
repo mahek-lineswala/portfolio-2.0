@@ -3,7 +3,6 @@ import React from 'react';
 const About = () => {
   return (
     <div className="min-h-screen bg-[#132135] text-white p-6 font-sans text-left">
-      {/* Top Section */}
       <div className="flex items-center space-x-6 ">
         <img
           src="/images/neko.jpg"
@@ -15,8 +14,6 @@ const About = () => {
           <p className="text-gray-300">Web Developer & UI/UX Designer</p>
         </div>
       </div>
-
-      {/* Description */}
       <div className="mt-6 space-y-4">
         <p className="text-lg">
           Hi, I'm Mahek — a web developer and UI/UX designer who loves building clean, user-friendly interfaces. <br />
@@ -35,8 +32,6 @@ const About = () => {
           </li>
         </ul>
       </div>
-
-      {/* Bonus Section */}
       <div className="mt-8">
         <h2 className="text-xl font-semibold mb-2">Things I Like</h2>
         <ul className="list-disc list-inside space-y-1 text-gray-300">
@@ -47,6 +42,9 @@ const About = () => {
           <li>Helping others get unstuck (after googling it myself)</li>
           <li>A lil bit of a gamer</li>
         </ul>
+      </div>
+      <div className="  w-fit px-2 py-1 mx-52 mt-4 border-2 border-white rounded-md drop-shadow-tag text-white text-sm md:text-base hover:translate-y-[2px] duration-100">
+        <a href="/icons/mahek_lineswala_resume" download="" className="text-center" onClick={() => { playSound('/sounds/open.mp3'); }}> Download Resume</a>
       </div>
     </div>
   );
