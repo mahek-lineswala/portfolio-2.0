@@ -2,21 +2,20 @@ import projects from "../../data/Projects_temp";
 import { useState } from "react";
 
 function Work() {
-  const [selected, setSelected] = useState(null);
 
   return (
     <>
-    <div className="flex flex-col sm:flex-row justify-between gap-4">
-      <div className="w-full lg:w-1/2">
+    <div className="flex flex-col sm:flex-row justify-between gap-6 mb-8">
+      <div className="w-full lg:w-1/2 ">
         <h2 className="text-white text-left text-2xl font-bold mb-4">LANGUAGES</h2>
         <div className="flex flex-wrap gap-2">
           {[
-            "HTML", "Css", "React","C++", "C#", "C", "JavaScript", "php",
-            "Python",  "Java", "Mysql", "Tailwind"
+            "HTML", "Css", "React","C++","JavaScript", "C", 
+            "Python",  "Java", "Mysql", "Tailwind",
           ].map((lang) => (
             <p
               key={lang}
-              className="px-4 py-2 bg-[#171717] border-2 border-white rounded-md drop-shadow-tag text-white text-sm md:text-base hover:translate-y-[2px] duration-100"
+              className="px-4 py-1 bg-[#171717] border-2 border-white rounded-md drop-shadow-tag text-white font-mono text-sm md:text-base hover:translate-y-[2px] duration-100"
             >
               {lang}
             </p>
@@ -25,11 +24,11 @@ function Work() {
       </div>
       <div className="w-full lg:w-1/2">
         <h2 className="text-white text-left text-2xl font-bold mb-4">TOOLS</h2>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2  ">
           {["Figma", "Canva", "Git", "Blender", "Github", "Vercel"].map((tool) => (
             <p
               key={tool}
-              className="px-4 py-2 bg-[#171717] border-2 border-white rounded-md drop-shadow-tag text-white text-sm md:text-base hover:translate-y-[2px] duration-100"
+              className="px-4 py-1 bg-[#171717] border-2 border-white rounded-md drop-shadow-tag text-white font-mono text-sm md:text-base hover:translate-y-[2px] duration-100"
             >
               {tool}
             </p>

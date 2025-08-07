@@ -43,9 +43,6 @@ const About = () => {
           <li>A lil bit of a gamer</li>
         </ul>
       </div>
-      <div className="  w-fit px-2 py-1 mx-52 mt-4 border-2 border-white rounded-md drop-shadow-tag text-white text-sm md:text-base hover:translate-y-[2px] duration-100">
-        <a href="/icons/mahek_lineswala_resume" download="" className="text-center" onClick={() => { playSound('/sounds/open.mp3'); }}> Download Resume</a>
-      </div>
     </div>
   );
 };

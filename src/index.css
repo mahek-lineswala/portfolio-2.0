@@ -4,6 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  .animate-pulse {
+    animation: pulse 2s infinite ease-in-out;
+  }
+}
+
+
 /* For Chrome, Edge, Safari */
 .transparent-scrollbar::-webkit-scrollbar {
   width: 8px;

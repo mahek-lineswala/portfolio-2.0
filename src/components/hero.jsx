@@ -5,6 +5,9 @@ import Work from "./Popups_temp/Work_temp";
 import Education from "./Popups_temp/Edu_temp";
 import Contact from "./Popups_temp/Contact";
 
+import { ShootingStars } from "@/components/ui/shadcn-io/shooting-stars";
+
+
 function Hero() {
   const [active, setActive] = useState(null); // null means no popup
   
@@ -15,8 +18,18 @@ function Hero() {
 };
   return (
     
-    <section className="  font-inter min-h-screen flex flex-col justify-center text-center px-4 bg-[#171717] text-white">
-      {/* Title */}
+    <section className="overflow-x-hidden relative z-10 font-inter min-h-screen flex flex-col justify-center text-center px-4 bg-[#171717] text-white">
+      {/* Fixed twinkling background stars */}
+
+        <ShootingStars
+        starColor="#ffffff"
+        trailColor="#ffffff"
+        minSpeed={5}
+        maxSpeed={5}
+        minDelay={100}
+        maxDelay={300}
+        />
+
       <div className='mx-80'>
         <div className=" p-4 bg-[#171717] text-white text-left font-bold  border-t-2 border-l-2 border-r-2 border-white rounded-tr-lg rounded-tl-lg" >
             <p>home</p>
@@ -76,24 +89,34 @@ function Hero() {
         </div>
       </div>
       {active && (
+<div className="fixed inset-0 z-50 flex items-center justify-center">
   <div
-    className="fixed bottom-20 left-1/2 -translate-x-1/2 bg-[#132135] border-2 border-white rounded-lg w-[90%] max-w-2xl h-[450px] overflow-hidden shadow-xl "
+    className="bg-[#132135] border-2 border-white rounded-lg w-[90%] max-w-2xl h-[450px] overflow-hidden shadow-xl"
     style={{ resize: 'both' }}
   >
-    <div className="flex justify-between items-center px-4 py-2  bg-[#171717] text-white font-bold border-b border-gray-200" id="popupHeader">
+    <div className="flex justify-between items-center px-4 py-2 bg-[#171717] text-white font-bold border-b border-gray-200">
       <h3 className="capitalize">{active}</h3>
-      <button onClick={() => { playSound('/sounds/close.mp3'); setActive(null); }} className="text-sm text-white-500 hover:scale-110">[ X ] </button>
+      <button
+        onClick={() => {
+          playSound('/sounds/close.mp3');
+          setActive(null);
+        }}
+        className="text-sm text-white-500 hover:scale-110"
+      >
+        [ X ]
+      </button>
     </div>
 
     <div className="overflow-y-auto h-[calc(100%-3rem)] p-4 transparent-scrollbar">
       {active === 'about' && <About />}
       {active === 'links' && <Links />}
-      {active === 'work' && <Work  />}
+      {active === 'work' && <Work />}
       {active === 'education' && <Education />}
-      {active === 'contact' && <Contact /> }
+      {active === 'contact' && <Contact />}
     </div>
   </div>
-)}
+</div>
+      )}
     </section>
   );
 }

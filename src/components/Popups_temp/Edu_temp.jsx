@@ -14,7 +14,7 @@ function Education() {
 
       <div className="w-full space-y-4">
         <div className="border-b border-gray-600 p-4 text-left">
-            <div className="flex gap-4 flex-col sm:flex-row justify-between">
+            <div className="flex gap-4  sm:flex-row justify-between">
               <p className="text-md font-bold">Sardar Vallabhbhai Patel Institute of Technology, Vasad</p>
               <em>Sept 2022 - June 2026</em>
             </div>
@@ -25,7 +25,7 @@ function Education() {
         </div>
 
         <div className="border-b border-gray-600 p-4 text-left">
-            <div className="flex gap-4 flex-col sm:flex-row justify-between">
+            <div className="flex gap-4  sm:flex-row justify-between">
               <p className="text-md font-bold">Bright Day School (Class 12th, CBSE)</p>
               <em>2022</em>
             </div>
@@ -36,7 +36,7 @@ function Education() {
         </div>
 
         <div className="border-b border-gray-600 p-4 text-left"> 
-            <div className="flex gap-4 flex-col sm:flex-row justify-between">
+            <div className="flex gap-4  sm:flex-row justify-between">
               <p className="text-md font-bold">Bright Day School (Class 10th, CBSE)</p>
               <em>2020</em>
             </div>

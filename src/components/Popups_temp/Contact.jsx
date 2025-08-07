@@ -1,27 +1,22 @@
 function Contact() {
   return (
    <>
-      <div className="flex justify-center mx-36 my-8 w-fit">
-            <form className="contact-form"  action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="af438c12-3d08-4ebf-962a-851a9009ac00" />
-              <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
-              <input type="hidden" name="from_name" value="My Website" />
-              <div className="form-group-container">
-                <div className="pb-4">
-                  <label htmlFor="name" className="pr-4 text-lg">Your Name</label>
-                  <input id="name" name="name" className="pl-4 py-1 rounded-md text-black" placeholder=" Your name" type="text" required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email" className="pr-5 text-lg">Your Email</label>
-                  <input id="email" name="email" className="pl-4 py-1 rounded-md text-black" placeholder=" Your email" type="email" required />
-                </div> <br />
-                <div className="form-group">
-                  <textarea className="pl-4 pr-36 pb-12 pt-2 rounded-md mt-4 text-black" id="message" name="message" placeholder=" Your message" required></textarea>
-                </div>
-              </div>
-              <button className="flex justify-center border rounded-md p-2 mx-auto mt-8 hover:bg-[#2A9D8F] shadow-md" type="submit">Send Message</button>
-            </form>
-        </div>
+      <h1 className="text-gray-300 text-5xl mt-20 font-bold font-mono">Let's work together!</h1>
+       <div className="flex gap-48 justify-center  ">
+         <button className=" border-2 px-2 py-1 rounded-lg bg-[#c0faff] mt-8 hover:bg-[#171717] hover:text-white text-black">
+          <a href="/icons/mahek_lineswala_resume" download="" className="text-center"> Download Resume</a>
+          </button>
+          <button className="border-2 px-2 py-1 rounded-lg bg-[#c0faff] mt-8 hover:bg-[#171717] mr-4 hover:text-white text-black">
+            <a href="mailto:maheklineswala@gmail.com">Come Say hello!</a>
+          </button>
+       </div>
+       <br />
+       <br />
+       <br />
+       <br />
+       <br />
+       <br />
+       <a href="mailto:maheklineswala@gmail.com" className="border-b">maheklineswala@gmail.com</a>
    </>
   );
 }

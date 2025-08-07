@@ -13,6 +13,13 @@ const projects = [
     link: "https://expense-tracker-etrackr.infinityfreeapp.com/",
     githubRepo: "https://github.com/mahek-lineswala/Expense-Tracker",
   },
+  {
+  id: 3,
+  title: "Portfolio v1",
+  description: "mahek.tech is my first personal portfolio website built using HTML, Tailwind CSS, and JavaScript. It showcases my design and development work through a clean, responsive layout with smooth scroll-based animations powered by AOS. This version emphasizes simplicity and accessibility, providing a strong foundation for presenting my skills and projects online.",
+  link: "https://mahek.tech/",
+  githubRepo: "https://github.com/mahek-lineswala/portfolio",
+}
 ];
 
 export default projects;
