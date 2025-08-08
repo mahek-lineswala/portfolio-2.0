@@ -18,7 +18,7 @@ function Hero() {
 };
   return (
     
-    <section className="overflow-x-hidden relative z-10 font-inter min-h-screen flex flex-col justify-center text-center px-4 bg-[#171717] text-white">
+    <section className="overflow-x-hidden relative z-10 font-inter min-h-screen flex flex-col justify-center text-center px-4 bg-[#000000] text-white">
       {/* Fixed twinkling background stars */}
 
         <ShootingStars
@@ -32,16 +32,16 @@ function Hero() {
 
       <div className='mx-80'>
         <div className=" p-4 bg-[#171717] text-white text-left font-bold  border-t-2 border-l-2 border-r-2 border-white rounded-tr-lg rounded-tl-lg" >
-            <p>home</p>
+            <p>Home</p>
         </div>
       </div>
         
       <div className='border-2 border-white rounded-bl-lg rounded-br-lg  bg-[#132135] p-20 px-28 mx-80'>
-        
-        <h1 className="text-5xl text-[powderblue] sm:text-6xl md:text-6xl font-bold mb-4">
-          hi, I'm mahek
+
+        <h1 className="text-5xl text-[powderblue] sm:text-6xl md:text-6xl font-bold mb-4 " id='nata-sans'>
+          hello, I'm mek!
         </h1>
-        <p className="text-2xl text-gray-300 mb-6">
+        <p className="text-2xl text-gray-300 mb-6 font-Allura">
            design, development, and aesthetics!
         </p>
         

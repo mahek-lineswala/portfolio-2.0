@@ -19,7 +19,7 @@ function Education() {
               <em>Sept 2022 - June 2026</em>
             </div>
             <div className="text-md text-gray-300 mt-2">
-              <p>Bachelor of Engineering, Computer Science and Design</p>
+              <p>Bachelor of Engineering, Computer Science & Design</p>
               <p>Current CGPA: 9.13</p>
             </div>
         </div>

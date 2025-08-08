@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-[#132135] text-white p-6 font-sans text-left">
+    <div className=" bg-[#132135] text-white p-6 font-sans text-left">
       <div className="flex items-center space-x-6 ">
         <img
           src="/images/neko.jpg"
@@ -22,10 +22,10 @@ const About = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            With a sharp eye for detail (and a love for smooth interactions), I turn coffee into code and ideas into engaging experiences. 
+            With a sharp eye for detail (and a love for smooth interactions), I turn coffee  <span className="ml-6"> into code and ideas into engaging experiences. </span>
           </li>
           <li>
-            I'm all about blending logic with creativity — plus the occasional bug-induced meltdown. <br />
+            I'm all about blending logic with creativity — plus the occasional bug-induced  <span className="ml-6"> meltdown. </span> <br />
           </li>
           <li>
             I design intuitive wireframes and build responsive sites with Tailwind & React.
