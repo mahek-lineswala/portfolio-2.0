@@ -16,8 +16,8 @@ const playSound = (soundPath) => {
         <h2 className="text-white text-left text-2xl font-bold mb-4">LANGUAGES</h2>
         <div className="flex flex-wrap gap-2">
           {[
-            "HTML", "Css", "React","C++","JavaScript", "C", 
-            "Python",  "Java", "Mysql", "Tailwind",
+            "HTML", "Css", "React","Tailwind", "PHP","JavaScript", "C", 
+            "Python",  "Java", "Mysql", "C++",
           ].map((lang) => (
             <p
               key={lang}
