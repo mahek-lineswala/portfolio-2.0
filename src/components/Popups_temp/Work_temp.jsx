@@ -11,8 +11,8 @@ const playSound = (soundPath) => {
     
     <>
     
-    <div className="flex flex-col sm:flex-row justify-between gap-6 mb-8">
-      <div className="w-full lg:w-1/2 ">
+    <div className="flex flex-col justify-between gap-6 mb-8">
+      <div className="w-full ">
         <h2 className="text-white text-left text-2xl font-bold mb-4">LANGUAGES</h2>
         <div className="flex flex-wrap gap-2">
           {[
@@ -29,7 +29,7 @@ const playSound = (soundPath) => {
           ))}
         </div>
       </div>
-      <div className="w-full lg:w-1/2">
+      <div className="w-full">
         <h2 className="text-white text-left text-2xl font-bold mb-4">TOOLS</h2>
         <div className="flex flex-wrap gap-2  ">
           {["Figma", "Canva", "Git", "Blender", "Github", "Vercel"].map((tool) => (
@@ -48,7 +48,7 @@ const playSound = (soundPath) => {
       {projects.map((project) => (
         <div key={project.id} className="border-b border-gray-600 p-4">
           <h3 className="text-lg text-white font-bold mb-2 text-left">{project.title}</h3>
-          <p className="text-sm text-left mb-3 text-white">{project.description}</p>
+          <p className="text-sm text-gray-400 text-left mb-3">{project.description}</p>
           <div className="flex gap-4">
             <div ><a href={project.link} target="_blank" className="text-sm border-b-2 w-fit text-[#c0faff] border-[#c0faff] font-bold">Link</a></div>
             <div ><a href={project.githubRepo} target="_blank "className="text-sm border-b-2 w-fit text-[#c0faff] border-[#c0faff] font-bold">Repository</a></div>
