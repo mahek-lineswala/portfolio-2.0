@@ -2,10 +2,36 @@ import projects from "../../data/Projects_temp";
 import { useState } from "react";
 
 function Work() {
-const playSound = (soundPath) => {
-  const audio = new Audio(soundPath);
-  audio.currentTime = 0; 
-  audio.play();
+  // Xylophone-like sound generator using Web Audio API
+  const playXylophoneSound = (noteIndex = 0) => {
+    try {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      
+      // Xylophone frequencies (pentatonic scale for pleasant sounds)
+      const frequencies = [523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50];
+      const frequency = frequencies[noteIndex % frequencies.length];
+      
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      // Xylophone-like tone (sine wave with quick attack/decay)
+      oscillator.type = 'sine';
+      oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
+      
+      // Quick attack and decay for xylophone effect
+      gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+      gainNode.gain.linearRampToValueAtTime(0.3, audioContext.currentTime + 0.01);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.3);
+    } catch (error) {
+      // Fallback if Web Audio API not available
+      console.log('Audio not available');
+    }
   };
   return (
     
@@ -18,10 +44,10 @@ const playSound = (soundPath) => {
           {[
             "HTML", "Css", "React","Tailwind", "PHP","JavaScript", "C", 
             "Python",  "Java", "Mysql", "C++",
-          ].map((lang) => (
+          ].map((lang, index) => (
             <p
               key={lang}
-              onMouseEnter={() => { playSound('/sounds/c.mp3'); }}
+              onMouseEnter={() => playXylophoneSound(index)}
               className="px-4 py-1 bg-[#171717] border-2 border-white rounded-md drop-shadow-tag text-white font-mono text-sm md:text-base hover:translate-y-[2px] duration-100"
             >
               {lang}
@@ -32,10 +58,10 @@ const playSound = (soundPath) => {
       <div className="w-full">
         <h2 className="text-white text-left text-2xl font-bold mb-4">TOOLS</h2>
         <div className="flex flex-wrap gap-2  ">
-          {["Figma", "Canva", "Git", "Blender", "Github", "Vercel"].map((tool) => (
+          {["Figma", "Canva", "Git", "Blender", "Github", "Vercel"].map((tool, index) => (
             <p
               key={tool}
-              onMouseEnter={() => { playSound('/sounds/c.mp3'); }}
+              onMouseEnter={() => playXylophoneSound(index + 11)}
               className="px-4 py-1 bg-[#171717] border-2 border-white rounded-md drop-shadow-tag text-white font-mono text-sm md:text-base hover:translate-y-[2px] duration-100"
             >
               {tool}

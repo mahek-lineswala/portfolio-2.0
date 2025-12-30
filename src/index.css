@@ -19,6 +19,27 @@
   }
 }
 
+/* subtle shooting-stars animation for background */
+@keyframes shooting {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-120px, 120px, 0);
+    opacity: 0;
+  }
+}
+
+.animate-shooting {
+  animation-name: shooting;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
 
 /* For Chrome, Edge, Safari */
 .transparent-scrollbar::-webkit-scrollbar {

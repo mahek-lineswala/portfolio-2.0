@@ -17,7 +17,7 @@ export function ShootingStars() {
   }, []);
 
   return (
-    <div className="absolute inset-0 -z-10 h-full w-full bg-black overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 h-full w-full bg-black overflow-hidden pointer-events-none">
       <div className="relative h-full w-full">
         {stars.map((star, i) => (
           <span
