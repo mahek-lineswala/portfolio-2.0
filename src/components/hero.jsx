@@ -71,7 +71,7 @@ function Hero() {
       // Responsive popup height
       const isSmallScreen = window.innerWidth < 1024;
       const heightPx = isSmallScreen
-        ? Math.round(window.innerHeight * 0.7)
+        ? Math.round(Math.min(window.innerHeight * 0.65, 500)) // 65% of viewport, max 500px on mobile - reduced to minimize bottom space
         : 450;
 
       // center-top base position
@@ -129,7 +129,7 @@ function Hero() {
       >
         <Draggable
           handle=".popup-header"
-          cancel=".popup-content"
+          cancel=".popup-content, .close-button"
           defaultPosition={{ x: 0, y: 0 }}
         >
           <div
@@ -145,8 +145,16 @@ function Hero() {
             >
               <h3 className="capitalize">{win.type}</h3>
               <button
-                onClick={() => closeWindow(win.id)}
-                className="text-sm text-white hover:scale-110"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  closeWindow(win.id);
+                }}
+                onTouchStart={(e) => {
+                  e.stopPropagation();
+                }}
+                className="close-button text-sm text-white hover:scale-110 px-2 py-1 touch-manipulation"
+                style={{ touchAction: "manipulation", cursor: "pointer" }}
               >
                 [ X ]
               </button>
